@@ -7,12 +7,24 @@ import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.lang.reflect.Field;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 /**
  * @author sjl
  */
 public class DocumentProvider extends AbstractDocumentationProvider {
+
+    public static Properties properties = new Properties();
+    static {
+        try(InputStream resourceAsStream = DocumentProvider.class .getClassLoader().getResourceAsStream("element-tips.properties")) {
+            properties.load(resourceAsStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     @Nullable
     public String getQuickNavigateInfo(PsiElement element, PsiElement originalElement) {
@@ -33,30 +45,24 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         if (raw == null) {
             return "<i>empty</i>";
         }
-        return StringUtil.escapeXml(raw);
+        return StringUtil.escapeXmlEntities(raw);
     }
 
     @Override
     public String generateDoc(final PsiElement element, @Nullable final PsiElement originalElement) {
         // 相关处理，不处理返回null
-        String text = originalElement.getText();
+        String text = null;
+        if (originalElement != null) {
+            text = originalElement.getText();
+        }
 
         if (null != text) {
-            System.out.println(text);
             String doc = "doc: " + text;
             String textHandle = text.replaceAll("-", "").replaceAll("\n|\r\n", "");
-            Class clazz = DocumentConstant.class;
-            Field[] fields = clazz.getFields();
-            for (Field field : fields) {
-                if (textHandle.equals(field.getName()) && field.getType().toString().endsWith("java.lang.String")) {
-                    try {
-                        doc = (String) field.get(DocumentConstant.class);
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                    break;
-                }
+            if(properties.getProperty(textHandle) != null){
+                doc = properties.getProperty(textHandle);
             }
+
             if ("doc: ".equals(doc)) {
                 return null;
             }else{
@@ -65,4 +71,5 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         }
         return null;
     }
+
 }

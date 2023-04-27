@@ -47,7 +47,7 @@ public class ElementTagConstant {
         TAG_CONSTANT.put("el-footer", elFooterMap);
 
         HashMap<String, String[]> elButtonMap = new HashMap<>();
-        elButtonMap.put("size", new String[]{"medium", "small", "mini"});
+        elButtonMap.put("size", new String[]{"large", "default", "small"});
         elButtonMap.put("type", new String[]{"primary", "success", "warning", "danger", "info", "text"});
         elButtonMap.put("plain", new String[]{"true", "false"});
         elButtonMap.put("round", new String[]{"true", "false"});
@@ -67,13 +67,13 @@ public class ElementTagConstant {
         elRadioMap.put("label", new String[]{"div"});
         elRadioMap.put("disabled", new String[]{"true", "false"});
         elRadioMap.put("border", new String[]{"true", "false"});
-        elRadioMap.put("size", new String[]{"medium", "small", "mini"});
+        elRadioMap.put("size", new String[]{"large", "default", "small"});
         elRadioMap.put("name", new String[]{});
         elRadioMap.put("@change", new String[]{});
         TAG_CONSTANT.put("el-radio", elRadioMap);
 
         HashMap<String, String[]> elRadioGroupMap = new HashMap<>();
-        elRadioGroupMap.put("size", new String[]{"medium", "small", "mini"});
+        elRadioGroupMap.put("size", new String[]{"large", "default", "small"});
         elRadioGroupMap.put("disabled", new String[]{"true", "false"});
         elRadioGroupMap.put("text-color", new String[]{"#ffffff"});
         elRadioGroupMap.put("fill", new String[]{"#409eff"});
@@ -92,7 +92,7 @@ public class ElementTagConstant {
         elCheckboxMap.put("false-label", new String[]{});
         elCheckboxMap.put("disabled", new String[]{"true", "false"});
         elCheckboxMap.put("border", new String[]{"true", "false"});
-        elCheckboxMap.put("size", new String[]{"medium", "small", "mini"});
+        elCheckboxMap.put("size", new String[]{"large", "default", "small"});
         elCheckboxMap.put("name", new String[]{});
         elCheckboxMap.put("checked", new String[]{"true", "false"});
         elCheckboxMap.put("indeterminate", new String[]{"true", "false"});
@@ -100,7 +100,7 @@ public class ElementTagConstant {
         TAG_CONSTANT.put("el-checkbox", elCheckboxMap);
 
         HashMap<String, String[]> elCheckboxGroupMap = new HashMap<>();
-        elCheckboxGroupMap.put("size", new String[]{"medium", "small", "mini"});
+        elCheckboxGroupMap.put("size", new String[]{"large", "default", "small"});
         elCheckboxGroupMap.put("disabled", new String[]{"true", "false"});
         elCheckboxGroupMap.put("min", new String[]{"1"});
         elCheckboxGroupMap.put("max", new String[]{"10"});
@@ -126,7 +126,7 @@ public class ElementTagConstant {
         elInputMap.put("placeholder", new String[]{});
         elInputMap.put("clearable", new String[]{"true", "false"});
         elInputMap.put("disabled", new String[]{"true", "false"});
-        elInputMap.put("size", new String[]{"medium", "small", "mini"});
+        elInputMap.put("size", new String[]{"large", "default", "small"});
         elInputMap.put("prefix-icon", new String[]{});
         elInputMap.put("suffix-icon", new String[]{});
         elInputMap.put("rows", new String[]{"2"});
@@ -187,7 +187,7 @@ public class ElementTagConstant {
         elSelectMap.put("multiple", new String[]{"true", "false"});
         elSelectMap.put("disabled", new String[]{"true", "false"});
         elSelectMap.put("value-key", new String[]{});
-        elSelectMap.put("size", new String[]{"medium", "small", "mini"});
+        elSelectMap.put("size", new String[]{"large", "default", "small"});
         elSelectMap.put("clearable", new String[]{"true", "false"});
         elSelectMap.put("collapse-tags", new String[]{"true", "false"});
         elSelectMap.put("multiple-limit", new String[]{"0"});
@@ -239,7 +239,7 @@ public class ElementTagConstant {
         elCascaderMap.put("filterable", new String[]{"true", "false"});
         elCascaderMap.put("debounce", new String[]{"300"});
         elCascaderMap.put("change-on-select", new String[]{"true", "false"});
-        elCascaderMap.put("size", new String[]{"medium", "small", "mini"});
+        elCascaderMap.put("size", new String[]{"large", "default", "small"});
         elCascaderMap.put("before-filter", new String[]{"function"});
         elCascaderMap.put("@change", new String[]{});
         elCascaderMap.put("@active-item-change", new String[]{});
@@ -269,7 +269,7 @@ public class ElementTagConstant {
         elSliderMap.put("step", new String[]{"1"});
         elSliderMap.put("show-input", new String[]{"true", "false"});
         elSliderMap.put("show-input-controls", new String[]{"true", "false"});
-        elSliderMap.put("input-size", new String[]{"large", "medium", "small", "mini"});
+        elSliderMap.put("input-size", new String[]{"large", "large", "default", "small"});
         elSliderMap.put("show-stops", new String[]{"true", "false"});
         elSliderMap.put("show-tooltipss", new String[]{"true", "false"});
         elSliderMap.put("format-tooltip", new String[]{"function"});
@@ -287,7 +287,7 @@ public class ElementTagConstant {
         elTimePickerMap.put("disabled", new String[]{"true", "false"});
         elTimePickerMap.put("editable", new String[]{"true", "false"});
         elTimePickerMap.put("clearable", new String[]{"true", "false"});
-        elTimePickerMap.put("size", new String[]{"medium", "small", "mini"});
+        elTimePickerMap.put("size", new String[]{"large", "default", "small"});
         elTimePickerMap.put("placeholder", new String[]{});
         elTimePickerMap.put("start-placeholder", new String[]{});
         elTimePickerMap.put("end-placeholder", new String[]{});
@@ -388,7 +388,7 @@ public class ElementTagConstant {
         TAG_CONSTANT.put("el-rate", elRateMap);
         HashMap<String, String[]> elColorPickerMap = new HashMap<>();
         elColorPickerMap.put("disabled", new String[]{"true", "false"});
-        elColorPickerMap.put("size", new String[]{"medium", "small", "mini"});
+        elColorPickerMap.put("size", new String[]{"large", "default", "small"});
         elColorPickerMap.put("show-alpha", new String[]{"true", "false"});
         elColorPickerMap.put("color-format", new String[]{"hsl", "hsv", "hex", "rgb"});
         elColorPickerMap.put("popper-class", new String[]{});
@@ -426,7 +426,7 @@ public class ElementTagConstant {
         elFormMap.put("inline-message", new String[]{"true", "false"});
         elFormMap.put("status-icon", new String[]{"true", "false"});
         elFormMap.put("validate-on-rule-change", new String[]{"true", "false"});
-        elFormMap.put("size", new String[]{"medium", "small", "mini"});
+        elFormMap.put("size", new String[]{"large", "default", "small"});
         elFormMap.put("disabled", new String[]{"true", "false"});
         elFormMap.put("validate", new String[]{"Function(callback: Function(boolean, object))"});
         elFormMap.put("validateField", new String[]{"Function(prop: string, callback: Function(errorMessage: string))"});
@@ -443,7 +443,7 @@ public class ElementTagConstant {
         elFormItemMap.put("error", new String[]{});
         elFormItemMap.put("show-message", new String[]{"true", "false"});
         elFormItemMap.put("inline-message", new String[]{"true", "false"});
-        elFormItemMap.put("size", new String[]{"medium", "small", "mini"});
+        elFormItemMap.put("size", new String[]{"large", "default", "small"});
         elFormItemMap.put("resetField", new String[]{"function"});
         TAG_CONSTANT.put("el-form-item", elFormItemMap);
 
@@ -452,7 +452,7 @@ public class ElementTagConstant {
         elTableMap.put("max-height", new String[]{});
         elTableMap.put("stripe", new String[]{"true", "false"});
         elTableMap.put("border", new String[]{"true", "false"});
-        elTableMap.put("size", new String[]{"medium", "small", "mini"});
+        elTableMap.put("size", new String[]{"large", "default", "small"});
         elTableMap.put("fit", new String[]{"true", "false"});
         elTableMap.put("show-header", new String[]{"true", "false"});
         elTableMap.put("highlight-current-row", new String[]{"true", "false"});
@@ -537,7 +537,7 @@ public class ElementTagConstant {
         elTagMap.put("disable-transitions", new String[]{"true", "false"});
         elTagMap.put("hit", new String[]{"true", "false"});
         elTagMap.put("color", new String[]{});
-        elTagMap.put("size", new String[]{"medium", "small", "mini"});
+        elTagMap.put("size", new String[]{"large", "default", "small"});
         elTagMap.put("@close", new String[]{});
         TAG_CONSTANT.put("el-tag", elTagMap);
 
@@ -716,7 +716,7 @@ public class ElementTagConstant {
 
         HashMap<String, String[]> elDropdownMap = new HashMap<>();
         elDropdownMap.put("type", new String[]{"primary", "success", "warning", "danger", "info", "text"});
-        elDropdownMap.put("size", new String[]{"medium", "small", "mini"});
+        elDropdownMap.put("size", new String[]{"large", "default", "small"});
         elDropdownMap.put("split-button", new String[]{"true", "false"});
         elDropdownMap.put("placement", new String[]{"top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end"});
         elDropdownMap.put("trigger", new String[]{"hover", "click"});
