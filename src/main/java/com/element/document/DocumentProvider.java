@@ -45,7 +45,7 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         if (raw == null) {
             return "<i>empty</i>";
         }
-        return StringUtil.escapeXmlEntities(raw);
+        return StringUtil.escapeXml(raw);
     }
 
     @Override

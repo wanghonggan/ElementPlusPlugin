@@ -1,6 +1,8 @@
 package com.element;
 
 import com.element.document.DocumentConstant;
+import org.bouncycastle.util.Arrays;
+import org.bouncycastle.util.Properties;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -41,7 +43,7 @@ public class InitDocUtils {
             Element docElement = componentDoc.getElementsByClass("doc-content").get(0).getElementsByTag("div").get(0);
             Elements vpTable = docElement.getElementsByClass("vp-table");
             Elements vpTableParent = Objects.requireNonNull(docElement.children().first()).children();
-            String aUrl = "a href='" + url + "' target='_target'>" + url + "</a>\n";
+            String aUrl = "<a href='" + url + "' target='_target'>" + url + "</a>\n";
             vpTable.forEach(element -> {
                 String id = vpTableParent.get(element.elementSiblingIndex() - 1).attributes().get("id");
                 String[] strings = id.split("-");
