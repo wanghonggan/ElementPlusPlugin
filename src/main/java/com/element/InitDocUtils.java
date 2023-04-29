@@ -1,8 +1,6 @@
 package com.element;
 
 import com.element.document.DocumentConstant;
-import org.bouncycastle.util.Arrays;
-import org.bouncycastle.util.Properties;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
